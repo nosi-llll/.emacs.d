@@ -64,19 +64,22 @@
 
 ;; デフォルト フォント
 ;; (set-face-attribute 'default nil :family "Migu 1M" :height 110)
-(set-face-font 'default "Migu 1M-12:antialias=standard")
+;;(set-face-font 'default "Migu 1M-12:antialias=standard")
 
 ;; プロポーショナル フォント
 ;; (set-face-attribute 'variable-pitch nil :family "Migu 1M" :height 110)
-(set-face-font 'variable-pitch "Migu 1M-11:antialias=standard")
+;;(set-face-font 'variable-pitch "Migu 1M-11:antialias=standard")
 
 ;; 等幅フォント
-;; (set-face-attribute 'fixed-pitch nil :family "Migu 1M" :height 110)
-(set-face-font 'fixed-pitch "Migu 1M-11:antialias=standard")
+;;(set-face-attribute 'fixed-pitch nil :family "Migu 1M" :height 110)
+;;(set-face-font 'fixed-pitch "Migu 1M-11:antialias=standard")
 
 ;; ツールチップ表示フォント
 ;; (set-face-attribute 'tooltip nil :family "Migu 1M" :height 90)
-(set-face-font 'tooltip "Migu 1M-9:antialias=standard")
+;;(set-face-font 'tooltip "Migu 1M-9:antialias=standard")
+
+(set-face-attribute 'default nil :font "DejaVu Sans Mono 13")
+(set-frame-font "DejaVu Sans Mono 13" nil t)
 
 
 ;;;;;;;;;
@@ -258,3 +261,9 @@
 ;;;;;;;;;;;
 (setq inhibit-startup-message t)         ;; うざいメッセージを殺す
 
+;;;;;;;;
+;;mozc;;
+;;;;;;;;
+(require 'mozc)
+(set-language-environment "Japanese")
+(setq default-input-method "japanese-mozc")
