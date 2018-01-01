@@ -14,6 +14,7 @@
     (list "g++" (list "-Wall" "-std=c++14" "-Wextra" "-fsyntax-only" local-file))))
 
 (push '("\\.cpp$" flymake-cc-init) flymake-allowed-file-name-masks)
+(push '("\\.cc$" flymake-cc-init) flymake-allowed-file-name-masks)
 
 (add-hook 'c++-mode-hook
           '(lambda ()
@@ -241,7 +242,7 @@
 (auto-insert-mode)
 (setq auto-insert-directory "~/.emacs.d/insert/")
 (define-auto-insert "\\.cpp$" "template.cpp")
-
+(define-auto-insert "\\.cc$" "template.cpp")
 
 ;;;;;;;;;;;;
 ;;command;;
